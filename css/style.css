@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-grid {
+    background-color: #365EAE;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header {
+    background-color: #365EAE;
+    height: 80px;
+                        
+}
+
+.menu {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.menu a:hover {
+    color: #73e282;
+}
+
+.texto-login {
+    font-size: 20px;
+    background: #C46500;
+    border-radius: 28px;
+    color: #ffffff;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.texto-login:hover{
+    background-color: white;
+    color: black;
+    
+    
+}
+
+
+    
+div a img {
+    padding-top: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+
+
+
+.secao-promocao, .secao-destaque, .secao-novidade, .secao-galeria {
+    background-color: #C46500;
+    padding-top: 20px;
+}
+
+
+
+.promocao h2, .produtos1 h2, .novidade1, .galeria1 {
+    color: white;
+}
+
+
+.posicionamento-header {
+    position: relative;
+}
+
+
+footer {
+    background-color: black;
+}
+
+div {
+    display: flex;
+}
+
+.rodape {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.links {
+    display: block;
+    color: #ffffff;
+}
+
+.links h2 {
+    font-size: 24px;
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.links-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.logo-rodape {
+    height: 200px;
+    width: 200px;
+    
+}
+
+.sociais h2 {
+    color: #fff;
+    font-size: 10px;
+    margin-bottom: 8px;
+    
+}
+
+.sociais input[type="email"]::placeholder {
+    color: #b8b3b3;
+    font-weight: bold;
+}
+
+
+
+.botao-cadastrar {
+    width: 156px;
+    color: #fff;
+    background-color: #8326EF;
+    border: none;
+    font-size: 18px;
+}
+
+.siga-nos {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.8em;
+}
+
+.siga-nos img {
+    height: 90px;
+    width: 90px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1366px) {
+    .container-grid {
+        width: 90%;
+    }
+
+    #menu {
+        font-size: 20px;
+        z-index: 1;
+    }
+
+    .barras {
+        display: none;
+        width: 30px;
+        
+    }
+
+   
+
+    
+}
+
+@media screen and (max-width: 600px) {
+    .container-grid {
+        width: 90%;
+    }
+
+
+    .barras {
+        width: 30px;
+        display: inline-block;
+    }
+
+    .menu{
+        display: none;
+        flex-direction: column;
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        top: 0;
+        height: 60;
+        background-color: black;
+    }
+
+
+    .menu a {
+        text-align: center;
+        padding: 0;
+    }
+
+}
+

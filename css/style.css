@@ -66,6 +66,16 @@ div a img {
 
 
 
+#carrosel img {
+    display: none;
+}
+
+.banner-ativo {
+    display: flex;
+}
+
+
+
 .secao-promocao, .secao-destaque, .secao-novidade, .secao-galeria {
     background-color: #C46500;
     padding-top: 20px;
@@ -92,6 +102,7 @@ div {
 }
 
 .rodape {
+    flex-direction: column;
     padding: 16px 0;
     display: flex;
     justify-content: space-between;
@@ -162,7 +173,62 @@ div {
 
 
 
+body.login input {
+    background-color: #365EAE;
+}
 
+.secao-noticias {
+    background-color: #1E1C21;
+    padding: 30px 0;
+}
+
+.secao-noticias .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloco-noticias {
+    width: 70%;
+    height: 90%;
+    color: white;
+}
+
+
+
+.bloco-noticias h2 {
+    font-size: 25px;
+}
+
+.content-news {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px
+}
+
+.cardnews {
+    flex-direction: column;
+    width: 240px;
+    height: 200px;
+    color: #fff;
+    margin-bottom: 32px;
+    background: var(--gradient);
+    box-shadow: 0px 0px 10px orangered, 0px 0px 30px yellow;
+
+}
+
+.cardnews h3 {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 24;
+}
+
+
+.cardnews p {
+    padding-left: 20px;
+    font-size: 16px;
+}
 
 
 @media screen and (max-width: 1366px) {
@@ -212,6 +278,11 @@ div {
     .menu a {
         text-align: center;
         padding: 0;
+    }
+
+
+    .menu-ativo {
+        display: flex;
     }
 
 }

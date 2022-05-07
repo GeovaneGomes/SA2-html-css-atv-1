@@ -55,7 +55,13 @@ header {
     
 }
 
-
+/*logo pagina de login*/
+.logo {
+    padding-top: 30px;
+    
+    height: 200px;
+    width: 200px;
+}
     
 div a img {
     padding-top: 30px;
@@ -64,7 +70,11 @@ div a img {
 }
 
 
-
+.carrosel {
+    height: 505px;
+    width: 1000px;
+    
+}
 
 #carrosel img {
     display: none;
@@ -93,7 +103,7 @@ div a img {
 }
 
 
-footer {
+.footer {
     background-color: black;
 }
 
@@ -114,9 +124,7 @@ div {
     color: #ffffff;
 }
 
-.links h2 {
-    font-size: 24px;
-}
+
 
 .links a {
     color: #ffffff;
@@ -131,16 +139,13 @@ div {
     width: 400px;
 }
 
-.logo-rodape {
-    height: 200px;
-    width: 200px;
-    
-}
+
 
 .sociais h2 {
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
     margin-bottom: 8px;
+    margin-right: 150px
     
 }
 
@@ -152,14 +157,15 @@ div {
 
 
 .botao-cadastrar {
+    display: block;
     width: 156px;
     color: #fff;
     background-color: #8326EF;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.siga-nos {
+.siga-nos, .sociais, .links {
     display: inline-block;
     align-items: center;
     justify-content: space-between;
@@ -167,18 +173,16 @@ div {
 }
 
 .siga-nos img {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
 }
 
 
 
-body.login input {
-    background-color: #365EAE;
-}
+
 
 .secao-noticias {
-    background-color: #1E1C21;
+    background-color: #0d0d0d;
     padding: 30px 0;
 }
 
@@ -196,11 +200,14 @@ body.login input {
 
 
 .bloco-noticias h2 {
-    font-size: 25px;
+    font-size: 30px;
 }
 
+
+
 .content-news {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -208,11 +215,12 @@ body.login input {
 }
 
 .cardnews {
-    flex-direction: column;
+    display: inline;
     width: 240px;
-    height: 200px;
+    height: 240px;
     color: #fff;
     margin-bottom: 32px;
+    margin-left: 80px;
     background: var(--gradient);
     box-shadow: 0px 0px 10px orangered, 0px 0px 30px yellow;
 
@@ -231,8 +239,252 @@ body.login input {
 }
 
 
+/*Pagina de login*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    min-height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #365EAE;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+main form {
+    margin-top: 5%;
+    width: 35%;
+    height: 75vh;
+    background-color: #383c42;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main form .inputs-container {
+    margin-top: 10%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .inputs-container input {
+    width: 90%;
+    height: 45px;
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+
+    font-size: 16px;
+    color: #312e42;
+
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+
+}
+
+
+main form .inputs-container input:focus{
+    box-shadow: inset 1px 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+main form .password-container {
+    margin-top: 5%;
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form .password-container i {
+    position: absolute;
+    right: 8%;
+    top: 35%;
+    color: #777;
+    cursor: pointer;
+}
+
+main form .password-container #eye {
+    display: none;
+
+}
+
+
+main form .password-infos {
+    width: 90%;
+    margin-top: 3%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main form .password-infos a {
+    transition: 0.2s ease-in-out;
+
+}
+
+main form .password-infos a:hover {
+    color: #18acfe;
+}
+
+main form button {
+    background-color: #18acfe;
+    width: 90%;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    border-radius: 12px;
+    margin-top: 10%;
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
+main form button:hover {
+    background: #fff;
+    color: #18acfe;
+
+}
+
+
+main form .links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+main form .links-container span {
+    font-size: 0.8em;
+    font-weight: 600;
+
+}
+
+main form .links-container aside {
+    margin-top: 2%;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main form .links-container aside i {
+    font-size: 1.6em;
+    background-color: #fff;
+    padding: 4px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main form .links-container aside .google {
+    color: #e34133;
+
+}
+
+main form .links-container aside .google:hover {
+    background-color: #e34133;
+    color: #fff;
+}
+
+main form .links-container aside .linkedin {
+    color: #0a66c2;
+
+}
+
+main form .links-container aside .linkedin:hover {
+    background-color: #e34133;
+    color: #fff;
+}
+
+
+main form .links-container aside .facebook {
+    color: #14a0f9;
+
+}
+
+main form .links-container aside .facebook:hover {
+    background-color: #e34133;
+    color: #fff;
+}
+
+main form footer {
+    width: 100%;
+    
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form footer hr {
+    width: 100%;
+    height: 0.2px;
+    background-color: #fff;
+}
+
+main form footer span {
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 5%;
+}
+
+main form footer a {
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+main form footer a:hover {
+    color: #18acfe;
+}
+
 @media screen and (max-width: 1366px) {
-    .container-grid {
+    .container-grid .container-rodape {
         width: 90%;
     }
 
@@ -246,6 +498,8 @@ body.login input {
         width: 30px;
         
     }
+
+
 
    
 

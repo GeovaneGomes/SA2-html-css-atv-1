@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     $("#carrosel img:eq(0)").addClass("banner-ativo").show()
     setInterval(slide, 5000)
 
     function slide() {
-        if($(".banner-ativo").next().length) {
+        if ($(".banner-ativo").next().length) {
             $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
         } else {
             $(".banner-ativo").removeClass().hide()
@@ -13,7 +13,7 @@ $(document).ready(function() {
     }
 
 
-    $("#barras").click(function() {
+    $("#barras").click(function () {
         $("#menu").toggleClass("menu-ativo")
 
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 
     })
-})
+});
 
 let menu = document.getElementById("menu");
 
@@ -35,7 +35,7 @@ let menu = document.getElementById("menu");
 //        menu.style.display = "flex"
 //    } else {
 //        menu.style.display = "none"
- //   }
+//   }
 //}
 
 
@@ -51,7 +51,7 @@ function enviarEmail() {
 let listaNoticias = [
     {
         titulo: "Amazon prime esta doando Kindle",
-        descricao: "a amazon nesta semana estará doando para moradores de rua"
+        descricao: "a amazon nesta semana estará doando para moradores de rua a amazon nesta semana estará doando para moradores de rua  "
     },
     {
         titulo: "O dolar esta negativo",
@@ -76,7 +76,7 @@ let listaNoticias = [
         titulo: "SONY anuncia o preço do play 5 que caiu para 1000 reais",
         descricao: "Isso aqui se for verdade eu to no paraiso"
     }
-   
+
 ]
 
 
@@ -95,7 +95,34 @@ function renderizaNoticias() {
         </div>`
     }
 
-    
+
 
     espaco.innerHTML = template
 }
+
+
+
+
+
+// Pagina de login
+
+function showPassword() {
+    const eye = document.getElementById('eye');
+    const eyeSlash = document.getElementById('eye-slash');
+    const fieldPassword = document.getElementById('field-password');
+
+    if(eye.style.display === 'none') {
+        eye.style.display = 'block';
+        eyeSlash.style.display = 'none';
+        fieldPassword.type = 'text';
+    } else {
+        eye.style.display = 'none';
+        eyeSlash.style.display = 'block';
+        fieldPassword.type = 'password';
+    }
+};
+
+document.getElementById('btn-login').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('Logado');
+});

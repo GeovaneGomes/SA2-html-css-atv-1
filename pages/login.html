@@ -6,17 +6,66 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
         <link href="../pages/login.html" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/37a3928fbe.js" crossorigin="anonymous" defer></script>
         
         
     </head>
-    <body>
-        <form>
-            <h3 >Login!</h3>
-            <input id="email" type="text" name="email" placeholder="Seu e-mail..." />
-            <input id="password" type="password" name="senha" placeholder="Sua senha..." />
-            <input type="submit" name="acao" value="Enviar" /> 
-        </form>
-
+    <header>
+        <a href=""><img class="logo" src="../img/logo.png" alt="Logo do geo-game"></a>
         
-    </body>
+    </header>
+
+    <main>
+        <form>
+            <section class="inputs-container">
+
+                <input type="email" placeholder="exemple@gmail.com">
+
+                <div class="password-container">
+                    <input type="password" id="field-password" placeholder="********">
+                    <i class="fa-solid fa-eye" id="eye" onclick="showPassword()"></i>
+                    <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+                </div>
+
+            </section>
+
+            <section class="password-infos">
+                <div>
+                    <input type="checkbox">
+                    <span>Lembrar senha?</span>
+                </div>
+
+                <a href="#">Esqueceu sua senha?</a>
+            </section>
+
+            <button id="btn-login">Login</button>
+
+            <section class="links-container">
+                <span>Ou entre com:</span>
+
+                <aside>
+                    <a href="#"><i class="fa-brands fa-google-plus-square google"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-square facebook"></i></a>
+                </aside>
+            </section>
+
+
+            <footer>
+                <hr>
+                <span>Ainda não tem uma conta?<a href="#">Cadastre-se</a></span>
+            </footer>
+        </form>
+    </main>
+
+
+    <script src="../js/script.js"></script>
 </html>
